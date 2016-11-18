@@ -1,0 +1,13 @@
+D:\web\dupfilekiller\dupfilekiller\bin\Debug\dumpfilekiller.exe.config
+D:\web\dupfilekiller\dupfilekiller\obj\Debug\dumpfilekiller.exe
+D:\web\dupfilekiller\dupfilekiller\obj\Debug\dumpfilekiller.pdb
+D:\web\dupfilekiller\dupfilekiller\bin\Debug\dumpfilekiller.exe.manifest
+D:\web\dupfilekiller\dupfilekiller\bin\Debug\dumpfilekiller.application
+D:\web\dupfilekiller\dupfilekiller\bin\Debug\dumpfilekiller.exe
+D:\web\dupfilekiller\dupfilekiller\bin\Debug\dumpfilekiller.pdb
+D:\web\dupfilekiller\dupfilekiller\obj\Debug\dupfilekiller.csprojResolveAssemblyReference.cache
+D:\web\dupfilekiller\dupfilekiller\obj\Debug\dumpfilekiller.Form1.resources
+D:\web\dupfilekiller\dupfilekiller\obj\Debug\dumpfilekiller.Properties.Resources.resources
+D:\web\dupfilekiller\dupfilekiller\obj\Debug\dupfilekiller.csproj.GenerateResource.Cache
+D:\web\dupfilekiller\dupfilekiller\obj\Debug\dumpfilekiller.exe.manifest
+D:\web\dupfilekiller\dupfilekiller\obj\Debug\dumpfilekiller.application

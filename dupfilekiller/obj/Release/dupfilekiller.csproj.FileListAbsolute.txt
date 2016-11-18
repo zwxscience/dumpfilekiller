@@ -1,0 +1,13 @@
+D:\web\dumpfilekiller\dumpfilekiller\bin\Release\dumpfilekiller.exe.config
+D:\web\dumpfilekiller\dumpfilekiller\bin\Release\dumpfilekiller.exe.manifest
+D:\web\dumpfilekiller\dumpfilekiller\bin\Release\dumpfilekiller.application
+D:\web\dumpfilekiller\dumpfilekiller\bin\Release\dumpfilekiller.exe
+D:\web\dumpfilekiller\dumpfilekiller\bin\Release\dumpfilekiller.pdb
+D:\web\dumpfilekiller\dumpfilekiller\obj\Release\dupfilekiller.csprojResolveAssemblyReference.cache
+D:\web\dumpfilekiller\dumpfilekiller\obj\Release\dumpfilekiller.Form1.resources
+D:\web\dumpfilekiller\dumpfilekiller\obj\Release\dumpfilekiller.Properties.Resources.resources
+D:\web\dumpfilekiller\dumpfilekiller\obj\Release\dupfilekiller.csproj.GenerateResource.Cache
+D:\web\dumpfilekiller\dumpfilekiller\obj\Release\dumpfilekiller.exe.manifest
+D:\web\dumpfilekiller\dumpfilekiller\obj\Release\dumpfilekiller.application
+D:\web\dumpfilekiller\dumpfilekiller\obj\Release\dumpfilekiller.exe
+D:\web\dumpfilekiller\dumpfilekiller\obj\Release\dumpfilekiller.pdb

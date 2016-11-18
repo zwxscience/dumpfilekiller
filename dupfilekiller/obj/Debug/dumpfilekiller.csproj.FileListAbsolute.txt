@@ -1,0 +1,12 @@
+D:\web\dumpfilekiller\dumpfilekiller\bin\Debug\dumpfilekiller.exe.config
+D:\web\dumpfilekiller\dumpfilekiller\bin\Debug\dumpfilekiller.exe
+D:\web\dumpfilekiller\dumpfilekiller\bin\Debug\dumpfilekiller.pdb
+D:\web\dumpfilekiller\dumpfilekiller\obj\Debug\dumpfilekiller.Form1.resources
+D:\web\dumpfilekiller\dumpfilekiller\obj\Debug\dumpfilekiller.Properties.Resources.resources
+D:\web\dumpfilekiller\dumpfilekiller\obj\Debug\dumpfilekiller.csproj.GenerateResource.Cache
+D:\web\dumpfilekiller\dumpfilekiller\obj\Debug\dumpfilekiller.exe
+D:\web\dumpfilekiller\dumpfilekiller\obj\Debug\dumpfilekiller.pdb
+D:\web\dumpfilekiller\dumpfilekiller\bin\Debug\dumpfilekiller.exe.manifest
+D:\web\dumpfilekiller\dumpfilekiller\bin\Debug\dumpfilekiller.application
+D:\web\dumpfilekiller\dumpfilekiller\obj\Debug\dumpfilekiller.exe.manifest
+D:\web\dumpfilekiller\dumpfilekiller\obj\Debug\dumpfilekiller.application
