@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="dumpfilekiller.exe" size="10752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="dumpfilekiller.exe" size="11264">
       <assemblyIdentity name="dumpfilekiller" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LDAtkWl5GU127Wbv1O1QcAnthXJg6IAZpyXMXdczs1Y=</dsig:DigestValue>
+        <dsig:DigestValue>GA5knxuxR1JCTvMLFLGbRzPqpG/aKZqlAdurZWlY1ak=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

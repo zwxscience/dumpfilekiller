@@ -19,7 +19,7 @@ namespace dumpfilekiller
         }
         int fileIndex;
         string dumpfilefolderName;
-        Dictionary<string, long> fileInfo;
+        Dictionary<string, string> fileInfo;//key,src
         long savebit;
         int dupfiles;
         private void button1_Click(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace dumpfilekiller
                 dupfiles = 0;
                 //dumpfilefolderName = ;
                 dumpfilefolderName = fbd.SelectedPath + "\\dupfileToDelete";
-                fileInfo = new Dictionary<string, long>();
+                fileInfo = new Dictionary<string, string>();
                 dealfile(theFolder);
                 fileInfo.Clear();
                 string finalOutput = "共搜索文件 " + fileIndex + " 个,重复文件" + dupfiles + "个,节省空间共约 " + savebit / (1024 * 1024) + "M.";
@@ -62,12 +62,12 @@ namespace dumpfilekiller
                 string fileKey = NextFile.Name + "_" + NextFile.Length;//via fileName and size to identidy file
                 if (!fileInfo.Keys.Contains(fileKey))
                 {
-                    fileInfo.Add(fileKey, NextFile.Length);
+                    fileInfo.Add(fileKey, NextFile.FullName);
                 }
                 else
                 {
-                    string text = "文件" + fileIndex + ":" + NextFile.Name + ",:大小" + NextFile.Length + "字节";
-                    this.textBox1.Text += text+"是重复文件\r\n";
+                    string text = "文件序号" + fileIndex + ":" + NextFile.Name + ",大小:" + NextFile.Length + "字节。";
+                    this.textBox1.Text += text+"是重复文件。\r\n";
                     if (Directory.Exists(dumpfilefolderName) == false)//如果不存在就创建文件夹
                     {
                         Directory.CreateDirectory(dumpfilefolderName);
@@ -75,7 +75,7 @@ namespace dumpfilekiller
                     //将重复文件剪切到指定文件夹
                     try
                     {
-                        WriteFile(dumpfilefolderName + @"\movelog.txt", text + "来自" + NextFile.FullName);
+                        WriteFile(dumpfilefolderName + @"\movelog.txt", text + "保留原始文件"+ fileInfo[fileKey] + ",来自" + NextFile.FullName+"被移出。");
                         NextFile.MoveTo(dumpfilefolderName + @"\" + NextFile.Name);
                         dupfiles++;
                         savebit += NextFile.Length;
