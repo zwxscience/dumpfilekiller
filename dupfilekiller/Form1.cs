@@ -27,6 +27,7 @@ namespace dumpfilekiller
             //选择文件夹
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             fbd.SelectedPath = "E:\\Music";
+            this.textBox1.Text = "";
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 //this.textbox1.Text = ;
@@ -43,6 +44,7 @@ namespace dumpfilekiller
                 this.textBox1.Text = finalOutput + "\r\n"+ this.textBox1.Text;
                 MessageBox.Show(finalOutput);
             }
+
             savebit = 0;
             fileIndex = 0;
             dupfiles = 0;
@@ -57,15 +59,16 @@ namespace dumpfilekiller
                 fileIndex++;
                 this.label1.Text = "正在处理第 " + fileIndex + " 个文件";
                 System.Windows.Forms.Application.DoEvents();
-                if (!fileInfo.Keys.Contains(NextFile.Name))
+                string fileKey = NextFile.Name + "_" + NextFile.Length;//via fileName and size to identidy file
+                if (!fileInfo.Keys.Contains(fileKey))
                 {
-                    fileInfo.Add(NextFile.Name, NextFile.Length);
+                    fileInfo.Add(fileKey, NextFile.Length);
                 }
                 else
                 {
                     string text = "文件" + fileIndex + ":" + NextFile.Name + ",:大小" + NextFile.Length + "字节";
-                    this.textBox1.Text += text+"重复文件\r\n";
-                    if (Directory.Exists(dumpfilefolderName) == false)//如果不存在就创建file文件夹
+                    this.textBox1.Text += text+"是重复文件\r\n";
+                    if (Directory.Exists(dumpfilefolderName) == false)//如果不存在就创建文件夹
                     {
                         Directory.CreateDirectory(dumpfilefolderName);
                     }
