@@ -11,3 +11,4 @@ D:\web\dupfilekiller\dupfilekiller\obj\Debug\dumpfilekiller.Properties.Resources
 D:\web\dupfilekiller\dupfilekiller\obj\Debug\dupfilekiller.csproj.GenerateResource.Cache
 D:\web\dupfilekiller\dupfilekiller\obj\Debug\dumpfilekiller.exe.manifest
 D:\web\dupfilekiller\dupfilekiller\obj\Debug\dumpfilekiller.application
+D:\web\dupfilekiller\dupfilekiller\obj\Debug\dumpfilekiller.configForm.resources

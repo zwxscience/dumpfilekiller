@@ -18,6 +18,10 @@ namespace dumpfilekiller
         public Form1()
         {
             InitializeComponent();
+            deleteConfig deleteConfiginstance = deleteConfig.Instance();
+            deleteConfiginstance.FileTypes = "alltype";
+            deleteConfiginstance.DupFileStandr = "fileName;fileSize;";
+
         }
         int fileIndex;
         string dumpfilefolderName;
@@ -43,6 +47,7 @@ namespace dumpfilekiller
                 fileInfo = new Dictionary<string, string>();
                 dealfile(theFolder);
                 fileInfo.Clear();
+                this.textBox1.Text = "";
                 string finalOutput = "共搜索文件 " + fileIndex + " 个,重复文件" + dupfiles + "个,节省空间共约 " + savebit / (1024 * 1024) + "M.";
                 this.textBox1.Text = finalOutput + "\r\n" + this.textBox1.Text;
                 MessageBox.Show(finalOutput);
@@ -53,16 +58,66 @@ namespace dumpfilekiller
             dupfiles = 0;
 
         }
+
+        private bool IsFileType(FileInfo fileInfo)
+        {
+            deleteConfig deleteConfiginstance = deleteConfig.Instance();
+            string fileTypes = deleteConfiginstance.FileTypes;
+            string fileExtension = Path.GetExtension(fileInfo.FullName);//即扩展名
+            if (fileTypes == "alltype")
+            {
+                return true;
+            }
+            else if (fileTypes!=null&& fileTypes.IndexOf(fileExtension) > -1)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+        private string  getFileKey(FileInfo fileInfo)
+        {
+            string fileKey = "";//via fileName and size to identidy file
+            deleteConfig deleteConfiginstance = deleteConfig.Instance();
+            string dupFileStandr = deleteConfiginstance.DupFileStandr;
+            if(dupFileStandr != null && dupFileStandr.IndexOf("fileName")> -1)
+            {
+                fileKey += fileInfo.Name + "_";
+
+            }
+            if (dupFileStandr.IndexOf("fileName") > -1)
+            {
+                fileKey += fileInfo.Length + "_";
+
+            }
+            if (dupFileStandr.IndexOf("CreateTime") > -1)
+            {
+                fileKey += fileInfo.CreationTime + "_";
+
+            }
+            if (dupFileStandr.IndexOf("ModifiTime") > -1)
+            {
+                fileKey += fileInfo.LastWriteTime + "_";
+
+            }
+            return fileKey;
+
+        }
+
         private void dealfile(DirectoryInfo theFolder)
         {
 
             DirectoryInfo[] dirInfo = theFolder.GetDirectories();
             foreach (FileInfo NextFile in theFolder.GetFiles())  //遍历文件
             {
+                if(!IsFileType(NextFile))
+                {
+                    continue;
+                }
                 fileIndex++;
                 this.label1.Text = "正在处理第 " + fileIndex + " 个文件";
                 System.Windows.Forms.Application.DoEvents();
-                string fileKey = NextFile.Name + "_" + NextFile.Length;//via fileName and size to identidy file
+                string fileKey = getFileKey(NextFile);//via fileName and size to identidy file
                 if (!fileInfo.Keys.Contains(fileKey))
                 {
                     fileInfo.Add(fileKey, NextFile.FullName);
@@ -220,5 +275,13 @@ namespace dumpfilekiller
         fileSrcList.Clear(); 
 
         }
-}
+
+        private void deleteConfigButton_Click(object sender, EventArgs e)
+        {
+            configForm configbox = new configForm();
+            configbox.ShowDialog();
+            
+        }
+
+    }
 }

@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.deleteConfigButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -85,11 +86,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // deleteConfigButton
+            // 
+            this.deleteConfigButton.Location = new System.Drawing.Point(392, 30);
+            this.deleteConfigButton.Name = "deleteConfigButton";
+            this.deleteConfigButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteConfigButton.TabIndex = 14;
+            this.deleteConfigButton.Text = "配置";
+            this.deleteConfigButton.UseVisualStyleBackColor = true;
+            this.deleteConfigButton.Click += new System.EventHandler(this.deleteConfigButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 314);
+            this.Controls.Add(this.deleteConfigButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -110,6 +122,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button deleteConfigButton;
     }
 }
 
